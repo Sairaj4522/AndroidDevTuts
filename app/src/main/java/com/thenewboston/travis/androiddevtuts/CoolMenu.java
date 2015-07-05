@@ -55,7 +55,7 @@ public class CoolMenu extends ListActivity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		
-		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classes));
+		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, classes));
 	}
 
 	@Override
