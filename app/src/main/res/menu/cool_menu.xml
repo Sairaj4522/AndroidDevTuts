@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
-        android:title="About Us"
         android:id="@+id/aboutUs"
+        android:title="About Us"
+        android:orderInCategory="100"
+        android:showAsAction="never"
         />
 	<item
-        android:title="Preferences"
         android:id="@+id/preferences"
+        android:title="Preferences"
+        android:orderInCategory="100"
+        android:showAsAction="never"
         />
 	<item
-        android:title="Exit"
         android:id="@+id/exit"
+        android:title="Exit"
+        android:orderInCategory="100"
+        android:showAsAction="never"
         />
 	
 </menu>

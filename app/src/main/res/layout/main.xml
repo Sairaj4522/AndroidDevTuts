@@ -5,15 +5,12 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <!--
-        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
-    -->
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Your total is 0"
-        android:textSize="45dp"
+        android:text="@string/default_tvDisplay_text"
+        android:textSize="45sp"
         android:layout_gravity="center"
         android:gravity="center"
         android:id="@+id/tvDisplay"
@@ -28,27 +25,19 @@
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Subtract one"
+        android:text="@string/bSub_text"
         android:id="@+id/bSub"
         android:layout_gravity="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
     
     <!-- put your admob account Publisher ID in the ads:adUnitId field -->
-    <!--<com.google.ads.AdView
-        android:id="@+id/ad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ads:adUnitId="9832hjews"
-        ads:loadAdOnCreate="true"
-        ads:adSize="BANNER"/>-->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|center"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="@string/banner_ad_unit_id"/>
     
 </LinearLayout>

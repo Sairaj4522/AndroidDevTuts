@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 public class Splash extends Activity {
 	MediaPlayer ourSong;
@@ -13,7 +15,13 @@ public class Splash extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Fabric.with(this, new Crashlytics());
+
+		// Adding git hash to the app release through crashlytics
+		// Source: http://www.donnfelker.com/why-you-should-use-a-git-sha-in-your-crash-reporting/
+        Crashlytics.setString("git_sha", BuildConfig.GIT_SHA);
 		setContentView(R.layout.splash);
+
 		ourSong = MediaPlayer.create(this, R.raw.splashsound);
 		
 		

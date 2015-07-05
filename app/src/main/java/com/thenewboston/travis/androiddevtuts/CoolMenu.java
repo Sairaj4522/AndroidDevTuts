@@ -51,11 +51,11 @@ public class CoolMenu extends ListActivity {
 						.build());
 
 		// Removing title and go full screen
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		/*requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		*/
 		
-		
-		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classes));
+		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, classes));
 	}
 
 	@Override

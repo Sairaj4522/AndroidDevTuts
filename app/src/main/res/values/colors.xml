@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorLight">#FFB39DDB</color>
+    <color name="colorPrimary">#ffcd0007</color>
+    <color name="colorPrimaryDark">#ff87000b</color>
+    <color name="colorAccent">#FFFFC400</color>
+
+    <color name="positiveScore">#FFFF8B60</color>
+    <color name="negativeScore">#FF9494FF</color>
+
+    <color name="darkThemeTextColor">#FFFFFFFF</color>
+    <color name="darkThemeTextColorAlert">#FFF44336</color>
+
+    <color name="darkThemeTextColorMuted">#FFBDBDBD</color>
+    <color name="darkThemeTextColorAlertMuted">#FFC62828</color>
+
+    <color name="darkThemeStatusBar">#FF000000</color>
+    <color name="darkThemeToolbar">#FF212121</color>
+    <color name="darkThemeBackground">#FF252525</color>
+    <color name="darkThemeDialog">#FF353535</color>
+    <color name="darkThemeOverlay">#99252525</color>
+    <color name="gildedComment">#FFD8C161</color>
+    <color name="darkThemeShadowTranslucent">#55303030</color>
+
+</resources>
