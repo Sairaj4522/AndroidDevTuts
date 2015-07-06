@@ -9,6 +9,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TextVoice extends Activity implements OnClickListener {
 
@@ -37,8 +38,12 @@ public class TextVoice extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Random r = new Random();
-		String random = texts[r.nextInt(3)];
-		tts.speak(random, TextToSpeech.QUEUE_FLUSH, null);
+		String random = texts[r.nextInt(2)];
+		if (random.length() < TextToSpeech.getMaxSpeechInputLength()){
+			tts.speak(random, TextToSpeech.QUEUE_FLUSH , null);
+		} else {
+			Toast.makeText(TextVoice.this, "Some error occured", Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	@Override
