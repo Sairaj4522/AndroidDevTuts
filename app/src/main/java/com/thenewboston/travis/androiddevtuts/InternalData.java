@@ -77,10 +77,12 @@ public class InternalData extends Activity implements OnClickListener {
 					fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
 					fos.write(data.getBytes());
 					fos.close();
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
+				} catch (FileNotFoundException fnfe) {
+					fnfe.printStackTrace();
+				} catch (NullPointerException npe){
+					npe.printStackTrace();
+				} catch (IOException ioe) {
+					ioe.printStackTrace();
 				}
 				
 				break;
@@ -119,7 +121,7 @@ public class InternalData extends Activity implements OnClickListener {
 			}
 			try {
 				fis = openFileInput(FILENAME);
-				byte[] dataArray = new byte[fis.available()]; 
+				byte[] dataArray = new byte[fis.available()];
 				while(fis.read(dataArray) != -1){
 					collected = new String(dataArray);
 				}
@@ -127,7 +129,6 @@ public class InternalData extends Activity implements OnClickListener {
 				e.printStackTrace();
             } catch (NullPointerException e) {
                 e.printStackTrace();
-                Toast.makeText(InternalData.this, "No data found!", Toast.LENGTH_LONG).show();
             } catch (IOException e) {
 				e.printStackTrace();
 			} finally{

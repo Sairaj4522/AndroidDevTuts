@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.View;
 
 public class MyBringBack extends View {
@@ -24,6 +25,9 @@ public class MyBringBack extends View {
 		gBall = BitmapFactory.decodeResource(getResources(), R.drawable.greenball);
 		changingY = 0;
 		font = Typeface.createFromAsset(context.getAssets(), "G-Unit.TTF");
+		if(font == null){
+			Log.e("Error", "Runtime Exception G-Unit.TTF not found");
+		}
 		textPaint = new Paint();
 		middleRect = new Rect();
 		ourBlue = new Paint();
