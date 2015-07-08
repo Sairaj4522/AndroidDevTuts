@@ -24,7 +24,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MONKEY" />
 
             </intent-filter>
         </activity>
@@ -32,7 +31,7 @@
             android:name=".CoolMenu"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.thenewboston.travis.COOLMENU" />
+                <action android:name="com.thenewboston.travis.androiddevtuts.COOLMENU" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -40,6 +39,12 @@
         <activity
             android:name=".StartingPoint"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
         </activity>
         <activity
             android:name=".TextPlay"
@@ -66,7 +71,7 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Material.Light.Dialog">
             <intent-filter>
-                <action android:name="com.thenewboston.travis.ABOUT" />
+                <action android:name="com.thenewboston.travis.androiddevtuts.ABOUT" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -75,7 +80,7 @@
             android:name=".Prefs"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="com.thenewboston.travis.PREFS" />
+                <action android:name="com.thenewboston.travis.androiddevtuts.PREFS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -132,7 +137,7 @@
             android:name=".SQLView"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.thenewboston.travis.SQLVIEW" />
+                <action android:name="com.thenewboston.travis.androiddevtuts.SQLVIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

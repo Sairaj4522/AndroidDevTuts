@@ -8,8 +8,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -23,11 +21,11 @@ public class CoolMenu extends ListActivity {
 			"InternalData", "ExternalData", "SQLiteExample", "Accelerate",
 			"HttpExample", "WeatherXMLParsing", "GLExample","GLCubeEx",
 			"Voice","TextVoice","StatusBar","SeekBarVolume"};
-	
+
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		
+
 		String cheese = classes[position];
 		try {
 			Class<?> ourClass = Class.forName("com.thenewboston.travis.androiddevtuts."+ cheese);
@@ -50,11 +48,6 @@ public class CoolMenu extends ListActivity {
 								Stetho.defaultInspectorModulesProvider(this))
 						.build());
 
-		// Removing title and go full screen
-		/*requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		*/
-		
 		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, classes));
 	}
 
@@ -72,11 +65,11 @@ public class CoolMenu extends ListActivity {
 		switch(item.getItemId()){
 		
 			case R.id.aboutUs:
-				Intent i = new Intent("com.thenewboston.travis.ABOUT");
+				Intent i = new Intent("com.thenewboston.travis.androiddevtuts.ABOUT");
 				startActivity(i);
 				break;
 			case R.id.preferences:
-				Intent pIntent = new Intent("com.thenewboston.travis.PREFS");
+				Intent pIntent = new Intent("com.thenewboston.travis.androiddevtuts.PREFS");
 				startActivity(pIntent);
 				break;
 			case R.id.exit:

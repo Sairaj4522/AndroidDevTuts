@@ -17,7 +17,9 @@ public class StartingPoint extends Activity {
 
 	public void onCreate(Bundle savedInstaceState){
 		super.onCreate(savedInstaceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.starting_point);
+
+
 
 		counter = 0;
 		add = (Button) findViewById(R.id.bAdd);

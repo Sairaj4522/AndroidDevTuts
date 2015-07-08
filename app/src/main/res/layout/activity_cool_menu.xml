@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cool_menu_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?android:attr/colorPrimary"
+        android:minHeight="?android:attr/actionBarSize"
+        android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar" />
+
+    <!--<ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/cool_menu_list_view"
+        android:smoothScrollbar="true"
+        android:layout_below="@+id/cool_menu_toolbar" />-->
+</RelativeLayout>

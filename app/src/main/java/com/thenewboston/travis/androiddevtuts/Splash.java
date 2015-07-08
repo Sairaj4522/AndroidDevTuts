@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import com.crashlytics.android.Crashlytics;
+
 import io.fabric.sdk.android.Fabric;
 
 public class Splash extends Activity {
@@ -34,11 +35,11 @@ public class Splash extends Activity {
 		Thread timer = new Thread(new Runnable(){
 			public void run(){
 				try{
-					Thread.sleep(2800);
+					Thread.sleep(1000);
 				}catch(InterruptedException ex){
 				
 				}finally{
-					Intent intent = new Intent("com.thenewboston.travis.COOLMENU");
+					Intent intent = new Intent("com.thenewboston.travis.androiddevtuts.COOLMENU");
 					startActivity(intent);
 				}
 			}
