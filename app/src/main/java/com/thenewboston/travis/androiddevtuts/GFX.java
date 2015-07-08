@@ -16,7 +16,7 @@ public class GFX extends Activity {
 		
 		//wake-lock
 		PowerManager pM = (PowerManager) getSystemService(Context.POWER_SERVICE);
-		wL = pM.newWakeLock(PowerManager.FULL_WAKE_LOCK, "whatever");
+		wL = pM.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "whatever");
 		
 		super.onCreate(savedInstanceState);
 		wL.acquire();
@@ -28,7 +28,8 @@ public class GFX extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-		wL.release();
+		if(wL.isHeld()) //If the wL doesn't hold any Wakelock,wL.release() will lead into a java.lang.RuntimeException
+			wL.release();
 	}
 
 }

@@ -19,15 +19,20 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+//TODO
+// Remove deprecated code
+// Deal with twitter API 1.1 since the one used in this Activity is deprecated
+
 public class HttpExample extends Activity{
 
 	TextView httpStuff;
 	HttpClient client;
 	JSONObject json;
-	
-	
-	private final static String TURL = "http;//api.twitter.com/1/statuses/user_timeline.json?screen_name=";
-	
+
+
+	private final static String TURL = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,7 +56,7 @@ public class HttpExample extends Activity{
 		new Read().execute("text"); 
 	}
 	
-	public JSONObject lastTweet(String username) throws ClientProtocolException, IOException, JSONException {
+	public JSONObject lastTweet(String username) throws IOException, JSONException {
 		StringBuilder turl = new StringBuilder(TURL);
 		turl.append(username);
 		HttpGet get = new HttpGet(turl.toString());

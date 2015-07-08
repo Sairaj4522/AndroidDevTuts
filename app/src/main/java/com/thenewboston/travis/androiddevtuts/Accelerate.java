@@ -78,15 +78,21 @@ public class Accelerate extends Activity implements SensorEventListener {
 				if(!ourHolder.getSurface().isValid())
 					continue;
 				
-				Canvas canvas = ourHolder.lockCanvas();
-				canvas.drawRGB(02, 02, 150);
-				
-				float centerX = canvas.getWidth() / 2;
-				float centerY = canvas.getHeight() / 2;
-				
-				canvas.drawBitmap(ball, centerX + sensorX*20, centerY + sensorY*20, null);
-				
-				ourHolder.unlockCanvasAndPost(canvas);
+
+				try {
+					Canvas canvas = ourHolder.lockCanvas();
+					if(canvas == null)
+						throw(new NullPointerException("Canvas  canvas = ourHolder.lockCanvas() returned null canvas in Accelerate.java"));
+					canvas.drawRGB(02, 02, 150);
+					float centerX = canvas.getWidth() / 2;
+					float centerY = canvas.getHeight() / 2;
+
+					canvas.drawBitmap(ball, centerX + sensorX*20, centerY + sensorY*20, null);
+
+					ourHolder.unlockCanvasAndPost(canvas);
+				} catch (NullPointerException npe){
+					npe.printStackTrace();
+				}
 			}
 		}
 		
