@@ -38,7 +38,7 @@ public class SimpleBrowser extends Activity implements OnClickListener {
 
         ourBrow.setWebViewClient(new ourViewClient());
         try {
-            ourBrow.loadUrl("http://www.mybringback.com");
+            ourBrow.loadUrl("http://codebabes.com");
         } catch (Exception e) {
             e.printStackTrace();
         }
