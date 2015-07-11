@@ -70,12 +70,6 @@ crashlytics-build.properties
 fabric.properties
 
 #volley
-volley/bin
-volley/gen
-volley/.gradle
-volley/build
-volley/.settings
-volley/target
-volley/*.iml
-volley/.idea
-volley/local.properties
+volley/
+
+settings.gradle
