@@ -72,3 +72,7 @@ fabric.properties
 #volley
 volley/
 
+#Temporary additions
+gradlew
+gradlew.bat
+settings.gradle
