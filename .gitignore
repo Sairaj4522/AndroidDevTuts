@@ -64,7 +64,7 @@ atlassian-ide-plugin.xml
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
-crashlytics-build.properties
+#crashlytics-build.properties
 
 # fabric plugin
 fabric.properties
@@ -76,6 +76,7 @@ volley/.gradle
 volley/build
 volley/.settings
 volley/target
-volley/*.iml
+#volley/*.iml
 volley/.idea
 volley/local.properties
+volley/src/test
