@@ -32,7 +32,7 @@ public class SimpleBrowser extends Activity implements OnClickListener {
         //ActionBar.Title = "Hello from Toolbar";
 
         ourBrow = (WebView) findViewById(R.id.wvBrowser);
-        //ourBrow.getSettings().setJavaScriptEnabled(true);
+        ourBrow.getSettings().setJavaScriptEnabled(true);
         ourBrow.getSettings().setLoadWithOverviewMode(true);
         ourBrow.getSettings().setUseWideViewPort(true);
 
@@ -68,8 +68,10 @@ public class SimpleBrowser extends Activity implements OnClickListener {
                 break;
 
             case R.id.bBack:
-                if (ourBrow.canGoBack())
+                if (ourBrow.canGoBack()) {
                     ourBrow.goBack();
+                    url.setText(ourBrow.getOriginalUrl());
+                }
                 break;
 
             case R.id.bRefresh:
@@ -83,6 +85,7 @@ public class SimpleBrowser extends Activity implements OnClickListener {
 
             case R.id.bHistory:
                 ourBrow.clearHistory();
+                url.setText("");
                 break;
         }
     }
