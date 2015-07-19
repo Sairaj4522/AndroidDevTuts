@@ -1,1 +1,1 @@
-# AndroidDevTuts
+# Simple Android App
