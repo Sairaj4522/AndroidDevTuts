@@ -76,7 +76,7 @@ public class SQLiteExample extends Activity implements OnClickListener {
 				break;
 			
 			case R.id.bSQLopenView:
-				Intent i = new Intent("com.thenewboston.travis.SQLVIEW");
+				Intent i = new Intent("com.wbh.sairajmchavan.simpleapp.SQLVIEW");
 				startActivity(i);
 				break;
 			
@@ -93,7 +93,6 @@ public class SQLiteExample extends Activity implements OnClickListener {
 					sqlName.setText(returnedName);
 					sqlHotness.setText(returnedHotness);
 				} catch (Exception e){
-					didItWork = false;
 					String error = e.toString();
 					Dialog d = new Dialog(this);
 					d.setTitle("Dang it!");
@@ -116,7 +115,6 @@ public class SQLiteExample extends Activity implements OnClickListener {
 					ex.updateEntry(lRow, mName, mHotness);
 					
 				} catch (Exception e){
-					didItWork = false;
 					String error = e.toString();
 					Dialog d = new Dialog(this);
 					d.setTitle("Dang it!");
@@ -135,7 +133,6 @@ public class SQLiteExample extends Activity implements OnClickListener {
 					ex1.open();
 					ex1.deleteEntry(lRow1);
 				} catch (Exception e){
-					didItWork = false;
 					String error = e.toString();
 					Dialog d = new Dialog(this);
 					d.setTitle("Dang it!");

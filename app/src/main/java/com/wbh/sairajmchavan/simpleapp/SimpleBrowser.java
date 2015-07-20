@@ -23,14 +23,14 @@ public class SimpleBrowser extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simplebrowser);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //Toolbar will now take on default Action Bar characteristics
         //SetActionBar (toolbar);
         //You can now use and reference the ActionBar
         //ActionBar.Title = "Hello from Toolbar";
 
         ourBrow = (WebView) findViewById(R.id.wvBrowser);
-        ourBrow.getSettings().setJavaScriptEnabled(true);
+        //ourBrow.getSettings().setJavaScriptEnabled(true);
         ourBrow.getSettings().setLoadWithOverviewMode(true);
         ourBrow.getSettings().setUseWideViewPort(true);
 
@@ -77,8 +77,10 @@ public class SimpleBrowser extends Activity implements OnClickListener {
                 break;
 
             case R.id.bForward:
-                if (ourBrow.canGoForward())
+                if (ourBrow.canGoForward()) {
                     ourBrow.goForward();
+                    url.setText(ourBrow.getUrl());
+                }
                 break;
 
             case R.id.bHistory:

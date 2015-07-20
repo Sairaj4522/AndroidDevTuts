@@ -28,7 +28,7 @@ public class CoolMenu extends ListActivity {
 
 		String cheese = classes[position];
 		try {
-			Class<?> ourClass = Class.forName("com.thenewboston.travis.androiddevtuts."+ cheese);
+			Class<?> ourClass = Class.forName("com.wbh.sairajmchavan.simpleapp." + cheese);
 			Intent ourIntent = new Intent(CoolMenu.this, ourClass);
 			startActivity(ourIntent);
 		} catch (ClassNotFoundException e) {
@@ -65,11 +65,11 @@ public class CoolMenu extends ListActivity {
 		switch(item.getItemId()){
 		
 			case R.id.aboutUs:
-				Intent i = new Intent("com.thenewboston.travis.androiddevtuts.ABOUT");
+				Intent i = new Intent("com.wbh.sairajmchavan.simpleapp.ABOUT");
 				startActivity(i);
 				break;
 			case R.id.preferences:
-				Intent pIntent = new Intent("com.thenewboston.travis.androiddevtuts.PREFS");
+				Intent pIntent = new Intent("com.wbh.sairajmchavan.simpleapp.PREFS");
 				startActivity(pIntent);
 				break;
 			case R.id.exit:

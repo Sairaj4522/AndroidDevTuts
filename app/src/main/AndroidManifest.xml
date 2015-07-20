@@ -31,7 +31,7 @@
             android:name=".CoolMenu"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.thenewboston.travis.androiddevtuts.COOLMENU" />
+                <action android:name="com.wbh.sairajmchavan.simpleapp.COOLMENU" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -71,7 +71,7 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Material.Light.Dialog">
             <intent-filter>
-                <action android:name="com.thenewboston.travis.androiddevtuts.ABOUT" />
+                <action android:name="com.wbh.sairajmchavan.simpleapp.ABOUT" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -80,7 +80,7 @@
             android:name=".Prefs"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="com.thenewboston.travis.androiddevtuts.PREFS" />
+                <action android:name="com.wbh.sairajmchavan.simpleapp.PREFS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -137,7 +137,7 @@
             android:name=".SQLView"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.thenewboston.travis.androiddevtuts.SQLVIEW" />
+                <action android:name="com.wbh.sairajmchavan.simpleapp.SQLVIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

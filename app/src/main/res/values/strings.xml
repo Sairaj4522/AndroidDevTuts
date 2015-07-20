@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">The New Boston</string>
-    <string name="about_us_string">Thenewboston is a cool resource for variety of online tutorials\nBucky Roberts is the founder and tutor over there but thenewboston also has tutorials from various other authors\n one name being Travis who is teaching you Android in this particular series\nNote that the domain name for thenewboston.org has been currently been moved to buckysroom.com and in videos section.</string>
+    <string name="app_name">Simple App</string>
+    <string name="about_us_string">This is a demo app for improving knowledge base in Android design a fork version of Android Development Tutorial app from thenewboston.org, This is ongoing project and will continuously improved.</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="default_tvDisplay_text">Your total is 0</string>
     <string name="bSub_text">Subtract one</string>
+    <string name="etSQLName_hint">Name</string>
+    <string name="etSQLHotness_hint">Hotness scale 1 to 10</string>
+    <string name="bSQLUpdate_hint">Go</string>
+    <string name="bSQLopenView_hint">View</string>
+    <string name="etSQLrowInfo_hint">Enter Row ID</string>
+    <string name="bgetInfo_hint">Get Information</string>
+    <string name="bSQLmodify_hint">Edit Entry</string>
+    <string name="bSQLdelete_hint">Delete Entry</string>
 </resources>
