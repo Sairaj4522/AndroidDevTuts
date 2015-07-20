@@ -94,7 +94,7 @@ public class SimpleBrowser extends Activity implements OnClickListener {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater blowUp = getMenuInflater();
-        blowUp.inflate(R.menu.simple_browser_toolbar_menu, menu);
+        blowUp.inflate(R.menu.cool_menu, menu);
         return true;
     }
 
