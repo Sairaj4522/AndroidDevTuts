@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
+
 
 public class SQLiteExample extends Activity implements OnClickListener {
 
@@ -19,6 +23,7 @@ public class SQLiteExample extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Fabric.with(this, new Crashlytics());
 		setContentView(R.layout.sqliteexample);
 		
 		sqlUpdate = (Button) findViewById(R.id.bSQLUpdate);
