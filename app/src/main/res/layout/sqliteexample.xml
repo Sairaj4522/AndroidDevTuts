@@ -21,7 +21,7 @@
     -->
     <EditText
         android:id="@+id/etSQLName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="@string/etSQLName_hint"
@@ -38,23 +38,33 @@
         android:ems="10"
         android:layout_below="@+id/etSQLName" />
 
+    <LinearLayout
+        android:id="@+id/lLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/etSQLName">
 
     <Button
         android:id="@+id/bSQLUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bSQLUpdate_hint"
-        android:layout_below="@+id/etSQLName"
-        android:layout_toRightOf="@+id/etSQLHotness" />
+        android:text="@string/bSQLUpdate_hint" />
+
+        <Button
+            android:id="@+id/bSQLopenView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:text="@string/bSQLopenView_hint" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/bSQLopenView"
+        android:id="@+id/bgetInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bSQLopenView_hint"
-        android:layout_below="@+id/etSQLName"
-        android:layout_toRightOf="@+id/bSQLUpdate" />
-
+        android:text="@string/bgetInfo_hint"
+        android:layout_toRightOf="@+id/etSQLHotness"
+        android:layout_below="@+id/lLayout1" />
     <EditText
         android:id="@+id/etSQLrowInfo"
         android:layout_width="wrap_content"
@@ -62,14 +72,8 @@
         android:inputType="number"
         android:hint="@string/etSQLrowInfo_hint"
         android:ems="10"
-        android:layout_below="@+id/bSQLUpdate" />
-    <Button
-        android:id="@+id/bgetInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bgetInfo_hint"
-        android:layout_below="@+id/bSQLUpdate"
-        android:layout_toRightOf="@+id/etSQLrowInfo" />
+        android:layout_below="@+id/etSQLHotness" />
+
 
     <Button
         android:id="@+id/bSQLmodify"

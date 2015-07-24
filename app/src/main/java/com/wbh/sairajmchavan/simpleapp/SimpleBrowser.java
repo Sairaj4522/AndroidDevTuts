@@ -12,7 +12,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toolbar;
 
 public class SimpleBrowser extends Activity implements OnClickListener {
     EditText url;

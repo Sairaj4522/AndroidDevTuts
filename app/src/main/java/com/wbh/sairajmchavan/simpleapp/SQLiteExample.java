@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.facebook.stetho.Stetho;
 import com.crashlytics.android.Crashlytics;
 
 import io.fabric.sdk.android.Fabric;
@@ -23,7 +24,20 @@ public class SQLiteExample extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		Fabric.with(this, new Crashlytics());
+		Stetho.initialize(
+				Stetho.newInitializerBuilder(this)
+						.enableDumpapp(
+								Stetho.defaultDumperPluginsProvider(this))
+						.enableWebKitInspector(
+								Stetho.defaultInspectorModulesProvider(this))
+						.build());
+		// Adding git hash to the app release through crashlytics
+		// Source: http://www.donnfelker.com/why-you-should-use-a-git-sha-in-your-crash-reporting/
+		Crashlytics.setString("git_sha", BuildConfig.GIT_SHA);
+		Crashlytics.setString("buildTime", BuildConfig.BUILD_TIME);
+
 		setContentView(R.layout.sqliteexample);
 		
 		sqlUpdate = (Button) findViewById(R.id.bSQLUpdate);
